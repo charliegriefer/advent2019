@@ -3,9 +3,8 @@ import math
 
 def main():
     with open("day_01.txt") as f:
-        modules = [line.rstrip("\n") for line in f]
-    result = sum(map(lambda x: math.floor(int(x)/3) - 2, modules))
-
+        modules = [int(line) for line in f]
+    result = sum([math.floor(x/3) - 2 for x in modules])
     print(result)
 
 
