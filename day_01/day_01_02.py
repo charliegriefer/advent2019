@@ -1,22 +1,15 @@
 import math
-from itertools import repeat
 
 
 def main():
     with open("day_01.txt") as f:
         modules = [int(line) for line in f]
-
-    result = sum(map(recursive_fuel, modules, repeat(0)))
-    print(result)
+    print(sum([recursive_fuel(x, 0) for x in modules]))
 
 
 def recursive_fuel(n: int, s: int) -> int:
     fuel = calculate_fuel(n)
-
-    if fuel <= 0:
-        return s
-    else:
-        return recursive_fuel(fuel, s + fuel)
+    return s if fuel <= 0 else recursive_fuel(fuel, s + fuel)
 
 
 def calculate_fuel(n: int) -> int:
