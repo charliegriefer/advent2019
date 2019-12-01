@@ -1,6 +1,3 @@
-import math
-
-
 def main():
     with open("day_01.txt") as f:
         modules = [int(line) for line in f]
@@ -8,7 +5,7 @@ def main():
 
 
 def recursive_fuel(n: int, s: int) -> int:
-    fuel = math.floor(n/3) - 2
+    fuel = n//3 - 2
     return s if fuel <= 0 else recursive_fuel(fuel, s + fuel)
 
 
