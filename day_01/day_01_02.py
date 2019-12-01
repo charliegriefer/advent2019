@@ -1,7 +1,7 @@
 def main():
     with open("day_01.txt") as f:
         modules = [int(line) for line in f]
-    print(sum([recursive_fuel(m, 0) for m in modules]))
+    print(sum(recursive_fuel(m, 0) for m in modules))
 
 
 def recursive_fuel(m: int, result: int) -> int:
