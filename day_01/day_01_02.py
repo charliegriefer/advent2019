@@ -1,11 +1,12 @@
 import math
+from itertools import repeat
 
 
 def main():
     with open("day_01.txt") as f:
-        modules = [line.rstrip("\n") for line in f]
+        modules = [int(line) for line in f]
 
-    result = sum(map(lambda x: recursive_fuel(int(x), 0), modules))
+    result = sum(map(recursive_fuel, modules, repeat(0)))
     print(result)
 
 
