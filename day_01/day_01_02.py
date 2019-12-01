@@ -8,12 +8,8 @@ def main():
 
 
 def recursive_fuel(n: int, s: int) -> int:
-    fuel = calculate_fuel(n)
+    fuel = math.floor(n/3) - 2
     return s if fuel <= 0 else recursive_fuel(fuel, s + fuel)
-
-
-def calculate_fuel(n: int) -> int:
-    return math.floor(n/3) - 2
 
 
 if __name__ == "__main__":
