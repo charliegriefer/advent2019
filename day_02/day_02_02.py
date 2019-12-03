@@ -2,8 +2,8 @@ def main():
     with open("day_02.txt") as f:
         intcode = list(map(int, f.read().split(",")))
 
-    for noun in range(0, 100):
-        for verb in range(0, 100):
+    for noun in range(100):
+        for verb in range(100):
             ic = [g for g in intcode]
             ic[1] = noun
             ic[2] = verb
