@@ -13,9 +13,12 @@ def main():
                 else:
                     ic[g[3]] = ic[g[1]] + ic[g[2]] if g[0] == 1 else ic[g[1]] * ic[g[2]]
 
-                if ic[0] == 19690720:
-                    print(100 * noun + verb)
-                    break
+            if ic[0] == 19690720:
+                print(100 * noun + verb)
+                break
+        else:
+            continue
+        break
 
 
 if __name__ == "__main__":
